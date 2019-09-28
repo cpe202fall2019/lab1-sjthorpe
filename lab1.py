@@ -38,6 +38,8 @@ def bin_search(target, low, high, int_list):
    if int_list[(high+low)//2] == target:
       return (high+low)//2
    elif high == low or high-1 == low:
+      if int_list[high] == target:
+         return target
       return None
    elif int_list[(high+low)//2] > target:
       return bin_search(target, low, (high+low)//2, int_list)
