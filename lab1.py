@@ -9,7 +9,7 @@ def max_list_iter(int_list):
    if not int_list:
       return None
    m = int_list[0]
-   for i in range(len(int_list)-1):
+   for i in range(1, len(int_list)):
       if int_list[i] > m:
          m = int_list[i]
    return m

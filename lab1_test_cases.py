@@ -8,8 +8,10 @@ class TestLab1(unittest.TestCase):
         tlist = None
         with self.assertRaises(ValueError):  # checks for exception
             max_list_iter(tlist)
-            
-        self.assertEqual(max_list_iter([1,9,3,14,6]),14) # checks that max_list_iter returns the max for a full list of values
+
+        self.assertEqual(max_list_iter([1,9,3,14,6,8,22]),22) # checks that max_list_iter returns the max for a list where max is at the end    
+        self.assertEqual(max_list_iter([1,9,3,14,6]),14) # checks that max_list_iter returns the max for a list where max is in the middle
+        self.assertEqual(max_list_iter([29,1,9,3,14,6,8,22]),29) # checks that max_list_iter returns the max for a list where max is at the beginning
         self.assertEqual(max_list_iter([]),None) # checks that max_list_iter returns None for an empty list
 
 
